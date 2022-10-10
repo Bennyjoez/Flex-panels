@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background: rgb(189, 192, 0);
+}
+
+.panel {
+    height: 100vh;
+    background: rgb(79, 2, 79);
+    background-size: cover;
+    background-position: center;
+    font-size: calc(1.5rem + 0.5vw);
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 
+        font-size 0.7s ease-in,
+        flex 0.7s ease-in,
+        background-image 0.2s;
+}
+
+.panel > * {
+    border: 1px solid red;
+    width: 100%;
+    transition: transform 0.05s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p:nth-child(2) {
+    font-size: calc(1.5rem + 3vw);
+    text-transform: uppercase;
+}
+
+.panel > *:first-child {
+    transform: translateY(-100%);
+} 
+.panel.open-active > *:first-child {
+    transform: translateY(0);
+}
+.panel > *:last-child {
+    transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+    transform: translateY(0);
+}
+
+.panel.open {
+    flex: 5;
+}
+
+
+.panel1 {
+    background-image: url("https://images.unsplash.com/photo-1495926048989-432065eaae46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
+    color: aliceblue;
+}
+.panel2 {
+    background-image: url("https://images.unsplash.com/photo-1520962922320-2038eebab146?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+}
+.panel3 {
+    background-image: url("https://images.unsplash.com/photo-1562043236-559c3b65a6e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+.panel4{
+    background-image: url("https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+.panel5 {
+    background-image: url("https://images.unsplash.com/photo-1516298773066-c48f8e9bd92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    color: antiquewhite;
+}
