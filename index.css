@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -33,13 +34,17 @@
 }
 
 .panel > * {
-    border: 1px solid red;
     width: 100%;
     transition: transform 0.05s;
     flex: 1 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+p:not(p:nth-child(2)) {
+    color: rgb(228, 248, 242);
+    font-family: 'Alkalami', serif;
+    font-size: calc(1em + 1vw);
 }
 p:nth-child(2) {
     font-size: calc(1.5rem + 3vw);
@@ -80,4 +85,26 @@ p:nth-child(2) {
 .panel5 {
     background-image: url("https://images.unsplash.com/photo-1516298773066-c48f8e9bd92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     color: antiquewhite;
+}
+
+@media only screen and (max-width: 600px) {
+    .panel p {
+        font-size: 1em;
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    .panel > *:first-child {
+        transform: translateX(-100%);
+    } 
+    .panel.open-active > *:first-child {
+        transform: translateX(0);
+    }
+    .panel > *:last-child {
+        transform: translateX(100%);
+    }
+    .panel.open-active > *:last-child {
+        transform: translateX(0);
+    }
 }
